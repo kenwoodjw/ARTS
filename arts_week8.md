@@ -57,6 +57,22 @@ Go是强静态,没有隐式转换,语法开销比较小。赋值简单类型推�
 
 docker + Registror + consul + consul template
 
-![avatar][image/nginx.png]
+![1558368494393](/home/kenwood/Projects/ARTS/image/1558368494393.png)
+
+![1558368529692](/home/kenwood/Projects/ARTS/image/1558368529692.png)
+
+1.以相同的 `Consul` **标签**对 `Web Server` 进行**服务标记**和**分类**，**新增**或者**删除** `Web Server` 服务器节点；
+
+2.`Registrator` **监控**到 `Web Server` 的状态更新，自动在 `Consul`服务注册中心将它**注册**或者**注销**；
+
+3.`Consul-template` 订阅了 `Consul` 服务注册中心的**服务消息**，接收到 `Consul` 的消息推送，即 `Web Server` 服务节点**状态**发生改变。
+
+4.`Consul-template` 自动去修改和**替换** `Nginx` 服务器下的 `nginx`配置文件中的**模板**，并**重新加载**服务达到自动负载均衡的目的。
+
+。
 
 #### Share
+
+vscode的使用分享
+
+<https://larrylu.blog/vscode-tips-fe3320f9032a>
