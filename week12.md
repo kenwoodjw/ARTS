@@ -63,4 +63,12 @@ broker:kafka是分布式的，分布式的node叫做broker,负责records的存�
 
 #### Tips
 keepalive原理？
+通常,同一网段的所有主机都设置相同的，以网关为下一跳的缺省路由，当网关故障，即无法与外部通信，VRRP正好解决这个问题。
+VRRP:虚拟路由冗余协议，实现地址漂移的一种容错协议，为了不让路由成为瓶颈，多个路由组成虚拟路由，对外只提供master路由，其他路由为backup，
+为了防止非法用户构造报文攻击备用组，VRRP通过在VRRP报文中添加认证字的方式（简单字符认证/md5认证)
+在多个路由组成的虚拟路由中，如果所有主机使用同一个master,备用组空闲，造成资源浪费，于是，出现负载均衡VRRP
+负载均衡VRRP:同一台路由同时加入不同的虚拟VRRP组，
+VIP作用:比如master对外是以vip的形式，当master崩掉之后，backup切换，vip切换到backup，不影响用户连接体验，比如nginx
+keepalive实现高可用，
+
 #### Share
