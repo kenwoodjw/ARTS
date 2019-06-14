@@ -72,3 +72,5 @@ VIP作用:比如master对外是以vip的形式，当master崩掉之后，backup�
 keepalive实现高可用，
 
 #### Share
+rpc 介绍
+https://mp.weixin.qq.com/s/UYL8yD9lusl3ELPSiIDk_A
